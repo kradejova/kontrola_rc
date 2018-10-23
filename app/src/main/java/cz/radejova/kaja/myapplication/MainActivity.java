@@ -88,10 +88,12 @@ public class MainActivity extends AppCompatActivity {
     ////    TODO nutné ošetřit pro devíticiferné rodné číslo !!!!!!!!!!
     private boolean jeRodneCisloDelitelne(String rodneCisloText) {
         Integer devetCiferRodneCislo = Integer.parseInt(rodneCisloText.substring(0, 9));
-        Integer desataCifraRodneCislo = Integer.parseInt(rodneCisloText.substring(9));
+        Long desataCifraRodneCislo = Long.parseLong(rodneCisloText.substring(9));
         Long rodneCislo = Long.parseLong(rodneCisloText);
 
-        if (devetCiferRodneCislo % 11 == desataCifraRodneCislo && rodneCislo % 11 == 0) {
+        if (rodneCisloText.length() == 9) {
+            return true;
+        } else if (devetCiferRodneCislo % 11 == desataCifraRodneCislo && rodneCislo % 11 == 0) {
             return true;
         } else if (devetCiferRodneCislo % 11 == 10 && desataCifraRodneCislo == 0) {
             return true;
@@ -134,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
-        
+
     }
 
 
