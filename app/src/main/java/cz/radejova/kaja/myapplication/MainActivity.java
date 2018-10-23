@@ -128,13 +128,13 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("mesic", mesic);
                 intent.putExtra("rok",rok);
                 startActivity(intent);
+                main_rodne_editText.setText("");
 
             }
 
 
         }
-
-        main_rodne_editText.setText("");
+        
     }
 
 
