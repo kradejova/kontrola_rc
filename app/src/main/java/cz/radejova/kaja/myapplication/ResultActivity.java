@@ -65,7 +65,11 @@ public class ResultActivity extends AppCompatActivity {
         String rokText = String.valueOf(rok);
 
         if (rodneCislo.length() == 9) {
-            rokText = 19 + rokText;
+            if (rok >= 0 && rok <= 9) {
+                rokText = 190 + rokText;
+            } else {
+                rokText = 19 + rokText;
+            }
         } else if (rodneCislo.length() == 10 && rok < 19) {
             rokText = 20 + rokText;
         } else if (rodneCislo.length() == 10 && rok >= 19) {
